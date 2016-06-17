@@ -48,7 +48,7 @@ The declarativewidgets extension supports the following use cases:
 * Creating a UI using HTML markup and connecting the elements using [Polymer's data binding)[https://www.polymer-project.org/1.0/docs/devguide/data-binding].
 * Reacting to changes in data on the Kernel, for example, new data arriving on a Stream.
 
-TODO: Need one or two animations of the markup and it's resulting UI
+![taxi_declarative](https://cloud.githubusercontent.com/assets/2474841/15164018/a4e871fe-16d1-11e6-9f03-66c96b745cc4.gif)
 
 ### Current Features
 
