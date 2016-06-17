@@ -13,7 +13,7 @@ Alice is a Jupyter Notebook user. Alice has performed some data analysis in a No
 
 Depending on what language Alice is using for her Notebook, she will experience the following potential setbacks:
 
-1. Her language has very limited support for plotting and widgets (i.e. R, Scala), so she cannot complete here deliverable in the Notebook. She needs to use other tools and potentially seek help due to skill gaps.
+1. Her language has very limited support for plotting and widget (i.e. Scala), so she cannot complete here deliverable in the Notebook. She needs to use other tools and potentially seek help due to skill gaps.
 2. A particular widget is not available. Either Alice combines other packages into the Notebook and hope they interoperate, or she hits a wall due to here gap in knowledge of web technologies.
 
 Alice cannot simply do the following:
@@ -31,7 +31,7 @@ The incubating [declarative widgets extension for Jupyter Notebook](https://gith
 
 The declarativewidets extension focuses on enabling the user to create UI areas of the Notebook that can connect and interact with the code and data in the kernel.
 
-In conjunction with the (dashboard extension)(https://github.com/jupyter-incubator/dashboards) and related sub-projects, it is possible to turn Notebooks into full-features dashboards and applications.
+In conjunction with the (dashboard extension)(https://github.com/jupyter-incubator/dashboards) and related sub-projects, it is possible to turn Notebooks into full-featured dashboards and applications.
 
 ### Current and Potential Use Cases
 
@@ -76,29 +76,29 @@ The declarativewidgets extensions is a combination of:
 
 * `<urth-core-function>` - Enable binding to functions defined in the kernel
 * `<urth-core-dataframe>` - Access to read and query DataFrames
-* `<urth-core-bind>` - Extension to the `template` tag to allow data binding across cell and with data on the kernel
+* `<urth-core-bind>` - Extension to the `template` tag to allow data binding across cells and with data on the kernel
 * `<urth-core-import>` - Extension to the `link` tag to allow installing and importing web components
 
 There are other `core` elements, but they play a supporting role.
 
-Some of the `core` elements are a combination of browser and kernel component. On the browser side, these elements are build on top of the `jupyter-js-widgets` foundation. They communicate with the kernel through the Comm channel[[3]](#3).
+Some of the `core` elements are a combination of browser and kernel component. On the browser side, these elements are built on top of the `jupyter-js-widgets` foundation. They communicate with the kernel through the Comm channel[[3]](#3).
 
 ##### Viz elements
 
-There is a collection of `<urth-viz-*` element that are pure client side and are use to display data. These elements include a table view and a variety of plots. 
+There is a collection of `<urth-viz-*>` element that are pure client side and are use to display data. These elements include a table view and a variety of plots. 
 
 
 More details about the architecture can be found [here](https://github.com/jupyter-incubator/declarativewidgets/wiki). Additionally, see the [documentation](https://jupyter-incubator.github.io/declarativewidgets/docs.html).
 
 #### Notebook Server Extension
 
-The extension to the notebook server creates a new route for requesting the installation of new web component. The implementation uses Bower to download the packages for the web component and servers the content from a virtual path.
+The extension to the notebook server creates a new route for requesting the installation of new web component. The implementation uses Bower to download the packages for the web component and servers the content from a virtual path. Bower is used because that is what Polymer [recommends](https://www.polymer-project.org/1.0/docs/tools/reusable-elements) and uses for installing components.
 
 #### Kernel side code
 
 The declarativewidgets extension contains code to enable support in Python, R[[1]](#1), and Scala[[2]](#2).
 
-In Python, the code is built on to of the `ipywidgets` foundation. In the other languages, only the code necessary exist to enable declarativewidgets, built directly on top of the Comm channel support.
+In Python, the code is built on to of the `ipywidgets` foundation. In the other languages, where only the code necessary exists to enable declarativewidgets, they are built directly on top of the Comm channel support.
 
 
 #### Installation
@@ -155,7 +155,7 @@ The declarativewidgets extension is in the Jupyter Incubator, and under the Jupy
 
 #### Have a well-defined scope.
 
-The purpose of the declarativewidgets extension is to provide a language neutral approach to creating interactive notebooks. It is not the intention of this project to become a widget suite, rather, enable incorporating any web-component into a notebook and connect it to the code and data in the kernel.
+The purpose of the declarativewidgets extension is to provide a language neutral approach to creating interactive notebooks. It is not the intention of this project to become a widget suite, but rather, to enable incorporating any web-component into a notebook and connecting it to the code and data in the kernel.
 
 #### Be packaged using appropriate technologies such as pip, conda, npm, bower, docker, etc.
 
